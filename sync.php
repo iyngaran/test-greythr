@@ -1,8 +1,11 @@
 <?php
 $id = "6051f64b-02d8-4e31-a5e5-dcdd22c55ca7";//API ID generated from greytHR in API details page
-$swipes = file_get_contents("file:///attendance/swipes.txt");//Batch of swipes, one swipe per line
+$swipes = file_get_contents("./attendance/swipes.txt");//Batch of swipes, one swipe per line
 
-$private_key = file_get_contents("file:///attendance/6051f64b-02d8-4e31-a5e5-dcdd22c55ca7.pem");
+$private_key = file_get_contents("./attendance/6051f64b-02d8-4e31-a5e5-dcdd22c55ca7.pem");
+print($swipes)
+print(">>>>>>>>>>>>>")
+print($private_key)
 
 $pkeyid = openssl_pkey_get_private($private_key);//Private Key generated from greytHR in API details page
 
